@@ -8,5 +8,23 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script type="text/javascript">
+      window.django_context = {
+          version: "pagoda-customview-example",
+          title: "Pagoda CustomView Example",
+          user: {
+              id: 1,
+              username: "example",
+              isSuperuser: true,
+          },
+          legacyUiDisabled: false,
+          checkTermService: false,
+          extendedHeaderMenus: [],
+          headerColor: null,
+          flags: {
+              webhook: true,
+          },
+      };
+    </script>
   </body>
 </html> 

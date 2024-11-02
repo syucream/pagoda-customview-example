@@ -1,8 +1,18 @@
 import React from 'react'
 import { AppBase } from '@syucream/pagoda-core'
 
-const App: React.FC = () => {
-  return <AppBase />
+const HelloWorldPage: React.FC = () => {
+  return <div>hello world</div>
 }
 
-export default App 
+const App: React.FC = () => {
+  return <AppBase customRoutes={[
+      {
+        path: '/hello',
+        element: <HelloWorldPage />,
+      },
+    ]}
+  />;
+}
+
+export default App

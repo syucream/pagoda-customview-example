@@ -6,7 +6,15 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      '@pagoda-core': path.resolve(__dirname, 'node_modules/@syucream/pagoda-core/frontend/src')
+      '@syucream/pagoda-core': path.resolve(__dirname, 'node_modules/@syucream/pagoda-core'),
+      'react': path.resolve(__dirname, './node_modules/react'),
+      'react-dom': path.resolve(__dirname, './node_modules/react-dom')
+    },
+    dedupe: ['react', 'react-dom']
+  },
+  esbuild: {
+    logOverride: {
+      'ts6133': 'silent'
     }
-  }
+  },
 });
